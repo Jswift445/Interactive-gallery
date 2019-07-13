@@ -6,23 +6,7 @@
   box-sizing: border-box;
 }
 
-.container {
-  width: $max-width;
-  font-family: $font-stack;
-  margin: $margin-right;
-  @include desktop{
-    margin: 25px 270px;
-    width: 70%;
-  }
-}
 
-p{
-  margin-bottom: 1.25em;
-
-}
-ul {
-  list-style-type: none;
-  text-align: center;
-  margin-left: -50px;
-
+h1{
+  background: brown ;
 }
