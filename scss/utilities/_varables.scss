@@ -1,0 +1,42 @@
+// =============================================
+// Variables
+// =============================================
+
+//Colors
+$color: #33FFB8;
+$color-light: lighten($color, 10%);
+$white: #fff;
+$color-secondary: #00FFFF;
+$black-color: black;
+$btn-green: green;
+$btn-green-light: lighten($btn-green, 20%);
+$btn-red: tomato;
+$btn-red-light: lighten($btn-red, 5%);
+$btn-orange: darkorange;
+$btn-purple: purple;
+
+
+
+
+//Font
+$font-stack: 'Cairo', sans-serif;
+$font-stack-secondary: 'Bree Serif', serif;
+$font-style: uppercase;
+
+
+
+//layout
+$max-width: 80%;
+$margin-right: 0px 0px 0px 45px;
+$margin-top: 10px ;
+
+
+$colors : (
+12:#33ffcc,
+6: #00b3b3,
+4: #80ffff,
+3: #d9b3ff,
+5: #009973,
+8: #ff6633,
+7: #e66,
+);

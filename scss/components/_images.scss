@@ -1,0 +1,18 @@
+.img--logo {
+  margin-left: 115px;
+  @include desktop{
+    margin-left: 25px;
+  }
+}
+
+.img--avatar{
+ margin-left: 87px;
+}
+
+
+.img--frame{
+  width: 350px;
+border: 1px solid gray;
+padding: 25px;
+margin: 20px;
+}

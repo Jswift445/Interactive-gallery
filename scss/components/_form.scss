@@ -1,0 +1,16 @@
+
+.form__label--hidden {
+  display: flex;
+  flex-direction: row;
+  margin-left: 15px;
+}
+
+
+.form__input{
+  margin: 5px -1px;
+ background-color: $color-light;
+ border: none;
+ height: 4px;
+ width: 90%;
+margin-left: 15px;
+}

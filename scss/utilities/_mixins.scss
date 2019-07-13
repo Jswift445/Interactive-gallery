@@ -1,0 +1,23 @@
+// flex set up
+@mixin flexmuscle(
+   $disp: flex,
+    $dir: null,
+    $wrap: null,
+    $just: null) {
+  display: $disp;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $just;
+}
+
+// ==========================
+// Breakpoints
+// ==========================
+
+$desktop-width: 1400px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
