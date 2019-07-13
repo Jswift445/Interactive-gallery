@@ -1,0 +1,8 @@
+.search {
+  margin: 100px;
+  font-size: 16pt;
+  @include desktop{
+   margin:-4em -15em;
+   float:right;
+  }
+}

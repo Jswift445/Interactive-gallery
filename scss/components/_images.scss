@@ -1,18 +1,21 @@
-.img--logo {
-  margin-left: 115px;
+.container {
+    margin: 60px 140px;
+    height: 30px;
+    @include desktop{
+    @include flexmuscle($wrap: wrap);
+   margin:150px 300px;
+
+ }
+}
+
+.image1, .image2, .image3, .image4,
+.image5, .image6, .image7, .image8,
+.image9, .image10, .image11, .image12{
   @include desktop{
-    margin-left: 25px;
+  width: 320px;
+  height:250px;
+
+
+
   }
-}
-
-.img--avatar{
- margin-left: 87px;
-}
-
-
-.img--frame{
-  width: 350px;
-border: 1px solid gray;
-padding: 25px;
-margin: 20px;
 }
