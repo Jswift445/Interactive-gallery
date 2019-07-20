@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box; }
 
+a {
+  text-decoration: none; }
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -311,26 +314,19 @@ template {
   height: 30px; }
   @media (min-width: 1400px) {
     .container {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 150px 300px; } }
+      margin: 32px 300px; } }
 
 @media (min-width: 1400px) {
-  .image1, .image2, .image3, .image4,
-  .image5, .image6, .image7, .image8,
-  .image9, .image10, .image11, .image12 {
-    width: 320px;
-    height: 250px; } }
+  .container img {
+    margin: 15px;
+    width: 250px;
+    height: 190px; } }
 
 .search {
-  margin: 100px;
-  font-size: 16pt;
-  border: solid 1px lightgrey;
-  border-radius: 5px;
-  width: 100%; }
+  margin: 35px 5em;
+  font-size: 16pt; }
   @media (min-width: 1400px) {
     .search {
-      margin: -4em -15em;
-      float: right; } }
+      margin-left: 35em; } }
 
 /*# sourceMappingURL=index.css.map */

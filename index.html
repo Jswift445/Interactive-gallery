@@ -2,27 +2,91 @@
 <html>
 <head>
   <link rel="stylesheet" href="css/index.css">
+  <link type="text/css" rel="stylesheet" href="css/lightGallery.css" />
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <title>Interactive Photot Gallery</title>
+<script>
+    $(document).ready(function() {
+        $("#lightGallery").lightGallery();
+    });
+    function myFunction() {
+      // Declare variables
+      var input, filter, img, a, i, txtValue;
+      input = document.getElementById("searchBox");
+      filter = input.value.toUpperCase();
+      img= document.getElementById("lightGallery");
+      a = img.getElementsByTagName("a");
+
+      // Loop through all table rows, and hide those who don't match the search query
+      for (i = 0; i < a.length; i++) {
+        img = a[i].getElementsByTagName("img")[0];
+          txtValue = img.textContent || img.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+          } else {
+            a[i].style.display = "none";
+          }
+      }
+    }
+</script>
 </head>
 <body>
 <div class="search">
- <input type="text" class="searchBox" placeholder="Search..">
+ <input type="text" id="searchBox" onkeyup="myFunction()" placeholder="Search..">
 </div>
 
-<div class="container">
-<div class="image1"><img src="photos/thumbnails/01.jpg" alt="Hay Bales"></div>
-<div class="image2"><img src="photos/thumbnails/02.jpg" alt="Lake"></div>
-<div class="image3"><img src="photos/thumbnails/03.jpg" alt="Canyon"></div>
-<div class="image4"><img src="photos/thumbnails/04.jpg" alt="Iceberg"></div>
-<div class="image5"><img src="photos/thumbnails/05.jpg" alt="Desert"></div>
-<div class="image6"><img src="photos/thumbnails/06.jpg" alt="Fall"></div>
-<div class="image7"><img src="photos/thumbnails/07.jpg" alt="Plantation"></div>
-<div class="image8"><img src="photos/thumbnails/08.jpg" alt="Dunes"></div>
-<div class="image9"><img src="photos/thumbnails/09.jpg" alt="Countryside Lane"></div>
-<div class="image10"><img src="photos/thumbnails/10.jpg" alt="Sunset"></div>
-<div class="image11"><img src="photos/thumbnails/11.jpg" alt="Cave"></div>
-<div class="image12"><img src="photos/thumbnails/12.jpg" alt="Bluebells"></div>
-</div>
+<main class="container">
+<div id="lightGallery">
 
+  <a href="photos/01.jpg"   title=" I love hay bales. Took this snap on a drive through the countryside past some straw fields.">
+      <img src="photos/thumbnails/01.jpg" alt="Hay Bales"/>
+  </a>
+    <a href="photos/02.jpg" title="The lake was so calm today. We had a great view of the snow on the mountains from here.">
+        <img src="photos/thumbnails/02.jpg" alt="Lake"/>
+    </a>
+    <a href="photos/03.jpg"  title="I hiked to the top of the mountain and got this picture of the canyon and trees below.">
+        <img src="photos/thumbnails/03.jpg" alt="Canyon"/>
+    </a>
+    <a href="photos/04.jpg"  title="It was amazing to see an iceberg up close, it was so cold but didn’t snow today. ">
+        <img src="photos/thumbnails/04.jpg" alt="Iceberg"/>
+    </a>
+
+    <a href="photos/05.jpg"  title="The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons.">
+        <img src="photos/thumbnails/05.jpg" alt="Desert"/>
+    </a>
+
+    <a href="photos/06.jpg"  title="Fall is coming, I love when the leaves on the trees start to change color.">
+        <img src="photos/thumbnails/06.jpg" alt="Fall"/>
+    </a>
+
+    <a href="photos/07.jpg"  title="I drove past this plantation yesterday, everything is so green!">
+        <img src="photos/thumbnails/07.jpg" alt="Platation"/>
+    </a>
+
+    <a href="photos/08.jpg"  title="My summer vacation to the Oregon Coast. I love the sandy dunes!">
+        <img src="photos/thumbnails/08.jpg" alt="Dunes"/>
+    </a>
+
+    <a href="photos/09.jpg"  title="We enjoyed a quiet stroll down this countryside lane">
+        <img src="photos/thumbnails/09.jpg" alt="Countryside Lane"/>
+    </a>
+
+    <a href="photos/10.jpg"  title="Sunset at the coast! The sky turned a lovely shade of orange.">
+        <img src="photos/thumbnails/10.jpg" alt="Sunset"/>
+    </a>
+
+    <a href="photos/11.jpg"  title="I did a tour of a cave today and the view of the landscape below was breathtaking.">
+        <img src="photos/thumbnails/11.jpg" alt="Cave"/>
+    </a>
+
+    <a href="photos/12.jpg"  title="I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.">
+        <img src="photos/thumbnails/12.jpg" alt="Bluebells"/>
+    </a>
+    </div>
+  </main>
+
+<script src="js/lightgallery.js"></script>
+<script src="modules/lg-thumbnail.min.js"></script>
+<script src="modules/lg-fullscreen.min.js"></script>
 </body>
 </html>

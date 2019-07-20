@@ -1,8 +1,10 @@
 .search {
-  margin: 100px;
+  margin: 35px 5em;
   font-size: 16pt;
+
   @include desktop{
-   margin:-4em -15em;
-   float:right;
+   margin-left: 35em;
+
+
   }
 }
