@@ -15,6 +15,14 @@
 // ==========================
 // Breakpoints
 // ==========================
+$sm-device-width: 360px;
+
+@mixin phone {
+  @media (min-width: #{$sm-device-width}) {
+    @content;
+  }
+}
+
 
 $desktop-width: 1400px;
 

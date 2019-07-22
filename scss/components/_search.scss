@@ -1,10 +1,9 @@
 .search {
-  margin: 35px 5em;
+  @include phone{
+  margin: 35px 6em;
   font-size: 16pt;
-
-  @include desktop{
+}
+@include desktop{
    margin-left: 35em;
-
-
-  }
+ }
 }

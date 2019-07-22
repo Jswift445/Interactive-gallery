@@ -8,79 +8,76 @@
 <script>
     $(document).ready(function() {
         $("#lightGallery").lightGallery();
-    });
-    function myFunction() {
-      // Declare variables
-      var input, filter, img, a, i, txtValue;
-      input = document.getElementById("searchBox");
-      filter = input.value.toUpperCase();
-      img= document.getElementById("lightGallery");
-      a = img.getElementsByTagName("a");
+        $("#searchBox").keyup(function(){
+          var filter = $(this).val();
+          $(".image").each(function(){
 
-      // Loop through all table rows, and hide those who don't match the search query
-      for (i = 0; i < a.length; i++) {
-        img = a[i].getElementsByTagName("img")[0];
-          txtValue = img.textContent || img.innerText;
-          if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            a[i].style.display = "";
-          } else {
-            a[i].style.display = "none";
-          }
-      }
-    }
+            // If the div item does not contain the text phrase fade it out
+            if ($(this).attr('title').search(new RegExp(filter, "i")) < 0) {
+                $(this).fadeOut();
+
+            // Show the div item if the phrase matches
+            } else {
+                $(this).show();
+            }
+         });
+      });
+    });
+
+
 </script>
 </head>
 <body>
 <div class="search">
- <input type="text" id="searchBox" onkeyup="myFunction()" placeholder="Search..">
+ <input type="text" id="searchBox"  placeholder="Search..">
 </div>
 
 <main class="container">
 <div id="lightGallery">
 
-  <a href="photos/01.jpg"   title=" I love hay bales. Took this snap on a drive through the countryside past some straw fields.">
-      <img src="photos/thumbnails/01.jpg" alt="Hay Bales"/>
+  <a href="photos/01.jpg" title=" I love hay bales. Took this snap on a drive through the countryside past some straw fields.">
+      <img class="image"  src="photos/thumbnails/01.jpg" alt="Hay Bales"  title=" I love hay bales. Took this snap on a drive through the countryside past some straw fields."/>
   </a>
     <a href="photos/02.jpg" title="The lake was so calm today. We had a great view of the snow on the mountains from here.">
-        <img src="photos/thumbnails/02.jpg" alt="Lake"/>
+        <img class="image"  src="photos/thumbnails/02.jpg" alt="Lake"  title="The lake was so calm today. We had a great view of the snow on the mountains from here."/>
     </a>
     <a href="photos/03.jpg"  title="I hiked to the top of the mountain and got this picture of the canyon and trees below.">
-        <img src="photos/thumbnails/03.jpg" alt="Canyon"/>
+        <img class="image" src="photos/thumbnails/03.jpg" alt="Canyon" title="I hiked to the top of the mountain and got this picture of the canyon and trees below."/>
     </a>
-    <a href="photos/04.jpg"  title="It was amazing to see an iceberg up close, it was so cold but didn’t snow today. ">
-        <img src="photos/thumbnails/04.jpg" alt="Iceberg"/>
+    <a href="photos/04.jpg"  title="It was amazing to see an iceberg up close, it was so cold but didn't snow today. ">
+        <img class="image" src="photos/thumbnails/04.jpg" alt="Iceberg" title="It was amazing to see an iceberg up close, it was so cold but didn’t snow today. "/>
     </a>
 
     <a href="photos/05.jpg"  title="The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons.">
-        <img src="photos/thumbnails/05.jpg" alt="Desert"/>
+        <img class="image" src="photos/thumbnails/05.jpg" alt="Desert" title="The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons."/>
     </a>
 
     <a href="photos/06.jpg"  title="Fall is coming, I love when the leaves on the trees start to change color.">
-        <img src="photos/thumbnails/06.jpg" alt="Fall"/>
+        <img class="image" src="photos/thumbnails/06.jpg" alt="Fall" title="Fall is coming, I love when the leaves on the trees start to change color.">
     </a>
 
     <a href="photos/07.jpg"  title="I drove past this plantation yesterday, everything is so green!">
-        <img src="photos/thumbnails/07.jpg" alt="Platation"/>
+        <img class="image" src="photos/thumbnails/07.jpg" alt="Plantation" title="I drove past this plantation yesterday, everything is so green!"/>
     </a>
 
     <a href="photos/08.jpg"  title="My summer vacation to the Oregon Coast. I love the sandy dunes!">
-        <img src="photos/thumbnails/08.jpg" alt="Dunes"/>
+        <img class="image" src="photos/thumbnails/08.jpg" alt="Dunes" title="My summer vacation to the Oregon Coast. I love the sandy dunes!"/>
     </a>
 
     <a href="photos/09.jpg"  title="We enjoyed a quiet stroll down this countryside lane">
-        <img src="photos/thumbnails/09.jpg" alt="Countryside Lane"/>
+        <img class="image" src="photos/thumbnails/09.jpg" alt="Countryside Lane" title="We enjoyed a quiet stroll down this countryside lane"/>
     </a>
 
     <a href="photos/10.jpg"  title="Sunset at the coast! The sky turned a lovely shade of orange.">
-        <img src="photos/thumbnails/10.jpg" alt="Sunset"/>
+        <img class="image" src="photos/thumbnails/10.jpg" alt="Sunset" title="Sunset at the coast! The sky turned a lovely shade of orange."/>
     </a>
 
     <a href="photos/11.jpg"  title="I did a tour of a cave today and the view of the landscape below was breathtaking.">
-        <img src="photos/thumbnails/11.jpg" alt="Cave"/>
+        <img class="image" src="photos/thumbnails/11.jpg" alt="Cave" title="I did a tour of a cave today and the view of the landscape below was breathtaking."/>
     </a>
 
     <a href="photos/12.jpg"  title="I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.">
-        <img src="photos/thumbnails/12.jpg" alt="Bluebells"/>
+        <img class="image" src="photos/thumbnails/12.jpg" alt="Bluebells" title="I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in."/>
     </a>
     </div>
   </main>
