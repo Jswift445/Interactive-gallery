@@ -4,6 +4,9 @@
 a {
   text-decoration: none; }
 
+body {
+  max-width: 100%; }
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -309,26 +312,42 @@ template {
 [hidden] {
   display: none; }
 
-@media (min-width: 360px) {
-  .container {
-    margin: 80px 160px;
-    height: 30px; } }
-@media (min-width: 1400px) {
-  .container {
-    margin: 32px 320px; } }
+.container {
+  margin: 50px 35px;
+  height: 30px; }
+  @media (min-width: 768px) {
+    .container {
+      margin: 0px 3.8em; } }
+  @media (min-width: 1000px) {
+    .container {
+      margin: 6px 3em; } }
+  @media (min-width: 1700px) {
+    .container {
+      margin: 25px 25em; } }
 
-@media (min-width: 1400px) {
+@media (min-width: 1700px) {
   .container img {
-    margin: 35px;
-    width: 200px;
-    height: 190px; } }
+    margin: 25px; } }
 
-@media (min-width: 360px) {
-  .search {
-    margin: 35px 6em;
-    font-size: 16pt; } }
-@media (min-width: 1400px) {
-  .search {
-    margin-left: 35em; } }
+@media (min-width: 768px) {
+  img {
+    margin: 5px; } }
+
+@media (min-width: 1000px) {
+  img {
+    margin: 9px; } }
+
+.search {
+  margin: 35px 6em;
+  font-size: 16pt; }
+  @media (min-width: 768px) {
+    .search {
+      margin-left: 12em; } }
+  @media (min-width: 1000px) {
+    .search {
+      margin: 35px 19em; } }
+  @media (min-width: 1700px) {
+    .search {
+      margin-left: 35em; } }
 
 /*# sourceMappingURL=index.css.map */

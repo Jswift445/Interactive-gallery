@@ -15,7 +15,7 @@
 // ==========================
 // Breakpoints
 // ==========================
-$sm-device-width: 360px;
+$sm-device-width: 320px;
 
 @mixin phone {
   @media (min-width: #{$sm-device-width}) {
@@ -24,10 +24,27 @@ $sm-device-width: 360px;
 }
 
 
-$desktop-width: 1400px;
+$md-device-width: 768px;
+
+@mixin tablet {
+  @media (min-width: #{$md-device-width}) {
+    @content;
+  }
+}
+
+$desktop-width: 1000px;
 
 @mixin desktop {
   @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+
+$Lg-desktop-width: 1700px;
+
+@mixin LGdesktop {
+  @media (min-width: #{$Lg-desktop-width}) {
     @content;
   }
 }

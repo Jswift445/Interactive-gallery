@@ -5,27 +5,6 @@
   <link type="text/css" rel="stylesheet" href="css/lightGallery.css" />
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <title>Interactive Photot Gallery</title>
-<script>
-    $(document).ready(function() {
-        $("#lightGallery").lightGallery();
-        $("#searchBox").keyup(function(){
-          var filter = $(this).val();
-          $(".image").each(function(){
-
-            // If the div item does not contain the text phrase fade it out
-            if ($(this).attr('title').search(new RegExp(filter, "i")) < 0) {
-                $(this).fadeOut();
-
-            // Show the div item if the phrase matches
-            } else {
-                $(this).show();
-            }
-         });
-      });
-    });
-
-
-</script>
 </head>
 <body>
 <div class="search">
@@ -81,7 +60,7 @@
     </a>
     </div>
   </main>
-
+<script src="js/search.js"></script>
 <script src="js/lightgallery.js"></script>
 <script src="modules/lg-thumbnail.min.js"></script>
 <script src="modules/lg-fullscreen.min.js"></script>
