@@ -1,6 +1,7 @@
 .search {
   margin: 35px 6em;
   font-size: 16pt;
+  max-width: 400px;
 @include tablet{
    margin-left: 12em;
 }
@@ -11,4 +12,11 @@
  @include LGdesktop{
    margin-left: 35em;
  }
+}
+
+#searchBox{
+  max-width: 400px;
+  width: 100%;
+  border-radius: 5px;
+  border: solid lightgrey;
 }

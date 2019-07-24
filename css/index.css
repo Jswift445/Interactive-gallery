@@ -339,7 +339,8 @@ template {
 
 .search {
   margin: 35px 6em;
-  font-size: 16pt; }
+  font-size: 16pt;
+  max-width: 400px; }
   @media (min-width: 768px) {
     .search {
       margin-left: 12em; } }
@@ -349,5 +350,11 @@ template {
   @media (min-width: 1700px) {
     .search {
       margin-left: 35em; } }
+
+#searchBox {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 5px;
+  border: solid lightgrey; }
 
 /*# sourceMappingURL=index.css.map */
