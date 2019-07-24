@@ -32,7 +32,7 @@ $md-device-width: 768px;
   }
 }
 
-$desktop-width: 1000px;
+$desktop-width: 1400px;
 
 @mixin desktop {
   @media (min-width: #{$desktop-width}) {

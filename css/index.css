@@ -318,9 +318,9 @@ template {
   @media (min-width: 768px) {
     .container {
       margin: 0px 3.8em; } }
-  @media (min-width: 1000px) {
+  @media (min-width: 1400px) {
     .container {
-      margin: 6px 3em; } }
+      margin: 6px 15em; } }
   @media (min-width: 1700px) {
     .container {
       margin: 25px 25em; } }
@@ -333,9 +333,9 @@ template {
   img {
     margin: 5px; } }
 
-@media (min-width: 1000px) {
+@media (min-width: 1400px) {
   img {
-    margin: 9px; } }
+    margin: 20px; } }
 
 .search {
   margin: 35px 6em;
@@ -344,9 +344,9 @@ template {
   @media (min-width: 768px) {
     .search {
       margin-left: 12em; } }
-  @media (min-width: 1000px) {
+  @media (min-width: 1400px) {
     .search {
-      margin: 35px 19em; } }
+      margin: 35px 25em; } }
   @media (min-width: 1700px) {
     .search {
       margin-left: 35em; } }

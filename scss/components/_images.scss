@@ -6,7 +6,7 @@
  margin: 0px 3.8em;
 }
 @include desktop{
-  margin: 6px 3em;
+  margin: 6px 15em;
 }
 
   @include LGdesktop{
@@ -29,6 +29,6 @@
 
 img{
 @include desktop{
- margin: 9px;
-}
+ margin: 20px;
+ }
 }
